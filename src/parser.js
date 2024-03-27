@@ -126,6 +126,13 @@ function parseProjects(readme) {
     if (imagesMatch) {
         const images = imagesMatch[1].trim().split('\n').map(image => {
             const [name, link] = image.trim().slice(2, -1).split('](');
+            if (name.toLowerCase().includes('logo')) {
+                data.logo = { name, link };
+            } else if (name.toLowerCase().includes('image')) {
+                data.heroimage = { name, link };
+            } else {
+                data[name] = { name, link };
+            }
             return { name, link };
         });
         data.images = images;
