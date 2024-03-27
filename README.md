@@ -38,7 +38,7 @@ const yourPackage = require('your-package-name');
 // Example usage
 
 ## Demo
-A deployed demo of the project can be found [here]()
+A deployed demo of the project can be found [here](https://ashutosh7i.github.io/gitprojector/)
 
 ## Features
 List the main features of your project. Highlight what sets it apart from similar solutions and how users can benefit from these features.
