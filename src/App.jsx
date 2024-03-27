@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import parser from './parser.js';
 
 const username = "ashutosh7i";
+const token = import.meta.env.VITE_TOKEN;
 
 function App() {
   const [projects, setProjects] = useState([]);
 
   const fetchProjects = async () => {
     try {
-      const projectsData = await parser(username);
+      const projectsData = await parser(username, token);
       setProjects(projectsData);
     } catch (error) {
       console.error('Error fetching projects:', error.message);
