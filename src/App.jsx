@@ -20,7 +20,9 @@ function App() {
     fetchProjects();
   }, []);
 
-  console.log(projects);
+  //projects object has all data.
+  // console.log(projects);
+
   return (
     <div className="container">
       {projects.map((project, index) => (
